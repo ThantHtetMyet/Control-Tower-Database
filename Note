@@ -1,0 +1,27 @@
+API
+----
+curl -i http://localhost:5001/api/auth/signin
+
+curl -i -X POST http://192.3.71.120:5001/api/auth/signin ^
+   -H "Content-Type: application/json" ^
+   -d "{\"email\":\"system@gmail.com\",\"password\":\"12345\"}"
+
+Git
+-------
+# 1. Switch to the main branch
+git checkout main
+# Now you are on the main branch
+
+# 2. Update main to the latest version from remote
+git pull origin main
+# This ensures your local main branch is up-to-date with remote
+git reset --hard HEAD
+git clean -fd
+# 3. Merge changes from development branch into main
+git merge development
+# This brings all updates from development into main
+# Resolve any merge conflicts if Git reports them
+
+# 4. Push the updated main branch to remote
+git push origin main
+# Now the remote main branch has all the updates from development
