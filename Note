@@ -25,3 +25,12 @@ git merge development
 # 4. Push the updated main branch to remote
 git push origin main
 # Now the remote main branch has all the updates from development
+
+
+API
+-----
+dotnet run --urls "http://0.0.0.0:5000;https://localhost:7145"
+
+dotnet ef migrations add AddNewTableMaterialUsed
+dotnet ef database update
+
