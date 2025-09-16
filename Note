@@ -6,6 +6,11 @@ curl -i -X POST http://192.3.71.120:5001/api/auth/signin ^
    -H "Content-Type: application/json" ^
    -d "{\"email\":\"system@gmail.com\",\"password\":\"12345\"}"
 
+dotnet run --urls "http://0.0.0.0:5000;https://localhost:7145"
+
+dotnet ef migrations add AddNewTableMaterialUsed
+dotnet ef database update
+
 Git
 -------
 # 1. Switch to the main branch
@@ -27,10 +32,8 @@ git push origin main
 # Now the remote main branch has all the updates from development
 
 
-API
------
-dotnet run --urls "http://0.0.0.0:5000;https://localhost:7145"
 
-dotnet ef migrations add AddNewTableMaterialUsed
-dotnet ef database update
-
+WEB
+--------
+npm install --save react-organizational-chart
+npm install @mui/x-date-pickers date-fns
