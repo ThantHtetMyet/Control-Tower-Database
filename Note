@@ -32,6 +32,13 @@ git push origin main
 # Now the remote main branch has all the updates from development
 
 
+git remote -v
+
+git remote set-url origin https://github.com/ThantHtetMyet/Control-Tower-Python.git
+
+# To refresh for created new branches
+git fetch --all
+git branch -a
 
 WEB
 --------
